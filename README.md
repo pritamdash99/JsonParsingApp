@@ -35,3 +35,32 @@ Attaching a demo of the app for a simple json format reponse :
 https://user-images.githubusercontent.com/80701312/173413117-6c97f46d-98f6-4e7d-a3ff-5106bce9c810.mp4
 
 
+And for the response :
+[{
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  }, {..}, {..}]
+
+
+https://user-images.githubusercontent.com/80701312/173428047-5c8709ff-0b37-49ba-a7a8-2c674847d75d.mp4
+
+

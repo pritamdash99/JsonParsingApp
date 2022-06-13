@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iwJ-h5-DNB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -60,6 +60,59 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="65.625"/>
         </scene>
+        <!--User View Controller-->
+        <scene sceneID="EkS-KB-hVk">
+            <objects>
+                <viewController id="iwJ-h5-DNB" customClass="UserViewController" customModule="JsonParsingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jkQ-dR-pZ3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GR-hr-bRU">
+                                <rect key="frame" x="10" y="54" width="394" height="50"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KHF-ns-1tX"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Load Users">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="downloadButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ct-d4-jjV"/>
+                                    <action selector="downloadButtonClicked:" destination="iwJ-h5-DNB" eventType="touchUpInside" id="RiW-MS-ipd"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5QR-GG-rnu">
+                                <rect key="frame" x="0.0" y="154" width="414" height="708"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="708" id="t1a-5k-mod"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hho-IU-Fzh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hho-IU-Fzh" firstAttribute="trailing" secondItem="2GR-hr-bRU" secondAttribute="trailing" constant="10" id="0Qa-6L-CZy"/>
+                            <constraint firstItem="5QR-GG-rnu" firstAttribute="bottom" secondItem="hho-IU-Fzh" secondAttribute="bottom" id="Bdp-wQ-x6U"/>
+                            <constraint firstItem="5QR-GG-rnu" firstAttribute="leading" secondItem="hho-IU-Fzh" secondAttribute="leading" id="DPM-X5-Q5m"/>
+                            <constraint firstItem="5QR-GG-rnu" firstAttribute="trailing" secondItem="hho-IU-Fzh" secondAttribute="trailing" id="QEm-Op-die"/>
+                            <constraint firstItem="2GR-hr-bRU" firstAttribute="leading" secondItem="hho-IU-Fzh" secondAttribute="leading" constant="10" id="aDc-7E-k9P"/>
+                            <constraint firstItem="5QR-GG-rnu" firstAttribute="top" secondItem="2GR-hr-bRU" secondAttribute="bottom" constant="50" id="bLM-yM-Ovj"/>
+                            <constraint firstItem="2GR-hr-bRU" firstAttribute="top" secondItem="hho-IU-Fzh" secondAttribute="top" constant="10" id="uo3-CP-bvO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="downloadButton" destination="2GR-hr-bRU" id="r79-Hr-IEX"/>
+                        <outlet property="downloadedDataTableView" destination="5QR-GG-rnu" id="Ozt-61-y0Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d6L-gh-2cc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="66"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
@@ -67,6 +120,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
